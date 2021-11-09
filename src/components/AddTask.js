@@ -1,5 +1,5 @@
 import { useState } from 'react'
-const AddTask = ({onAdd}) =>{
+const AddTask = ({ onAdd }) =>{
     const [text,setText]=useState('')
     const [day,setDay]=useState('')
     const [reminder,setReminder]=useState(false)
@@ -10,9 +10,13 @@ const AddTask = ({onAdd}) =>{
             return
         }
         onAdd({text,day,reminder})
+
+        setText('')
+        setDay('')
+        setReminder(false)
     }
     return (
-        <form className='add-form' onSubmit={onsubmit}>
+        <form className='add-form' onSubmit={onSubmit}>
             <div className='form-control'>
                 <label htmlFor="">Task</label>
                 <input type='text' placeholder='Add Task'
@@ -30,6 +34,7 @@ const AddTask = ({onAdd}) =>{
                 <label htmlFor="">Set Reminder</label>
                 <input type='checkbox' placeholder='Add Task'
                        value={reminder}
+                       checked={reminder}
                        onChange={(e)=>setReminder(e.currentTarget.checked)}
                 />
             </div>
