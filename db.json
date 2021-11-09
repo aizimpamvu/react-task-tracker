@@ -13,10 +13,10 @@
       "reminder": true
     },
     {
-      "id": 3,
-      "text": "Webinar",
-      "day": "Nov 11th at 4:30pm",
-      "reminder": false
+      "text": "17",
+      "day": "19",
+      "reminder": false,
+      "id": 3
     }
   ]
 }
